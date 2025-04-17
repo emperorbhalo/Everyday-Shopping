@@ -52,5 +52,3 @@ def info():
 
     else:
         print("Invalid choice!")
-    else:
-        print(123)
