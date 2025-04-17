@@ -15,8 +15,8 @@ except Exception as e:
     print(e)
     
 def info():
-    email = client["Project-A"]
-    users = email["users"]
+    email=client["Project-A"]
+    users=email["users"]
 
     print("Enter your choice:")
     print("For sign-up enter 1")
@@ -31,11 +31,12 @@ def info():
     if choice == 1:
         email_input = input("Enter your Email: ")
         password_input = input("Enter your Password: ")
+        Balance_input = int(input("Enter your balance"))
 
         if users.find_one({"email": email_input}):
             print("This email is already registered.")
         else:
-            users.insert_one({"email": email_input, "password": password_input})
+            users.insert_one({"email": email_input, "password": password_input, "Balance":Balance_input})
             print("Sign-up successful!")
 
     elif choice == 2:
@@ -51,3 +52,5 @@ def info():
 
     else:
         print("Invalid choice!")
+    else:
+        print(123)
